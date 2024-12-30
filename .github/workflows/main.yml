@@ -1,1 +1,14 @@
+name: Demo Workflow
+on:
+    push:
+        branches:
+        - main
 
+jobs:
+    demo-app-deployment:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout Code
+          uses: actions/checkout@v2
+        - name: Show Message
+          run: echo 'welcome to github actions'
